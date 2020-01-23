@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSR with RR</title>
+    {{{styleTags}}}
+    <script src="/public/app.js" defer></script>
+</head>
+
+<body>
+<div id="app">{{{html}}}</div>
+<script>
+    // WARNING: See the following for security issues around embedding JSON in HTML:
+    // https://redux.js.org/recipes/server-rendering/#security-considerations
+    window.__PRELOADED_STATE__ = {{{state}}};
+</script>
+
+{{#if isDevelopment}}
+<script src="/reload/reload.js"></script>
+{{/if}}
+
+</body>
+</html>

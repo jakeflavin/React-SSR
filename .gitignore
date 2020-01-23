@@ -1,0 +1,5 @@
+# Don't check auto-generated stuff into git
+dist
+node_modules
+npm-debug.log
+.idea

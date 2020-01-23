@@ -1,0 +1,47 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react-redux/recommended",
+      "plugin:redux-saga/recommended",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ],
+    "plugins": [
+      "react",
+      "react-redux",
+      "redux-saga",
+      "prettier"
+    ],
+    "rules": {
+      "comma-dangle": [ "error", "only-multiline" ],
+      "indent": [ "error", 2, {"SwitchCase": 1} ],
+      "quotes": ["error", "single"],
+      "react-redux/mapDispatchToProps-prefer-shorthand": "off",
+      "prettier/prettier": ["error", {
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "none"
+      }]
+    },
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": "webpack.config.js"
+        }
+      },
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
